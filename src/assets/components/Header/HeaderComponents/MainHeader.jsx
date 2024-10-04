@@ -4,7 +4,7 @@ import logoIcon from "../../../stocks/images/OLX-Symbol.png";
 function MainHeader() {
   return (
     <>
-      <nav className="flex justify-between fixed w-full p-2 bg-olxnav items-center gap-6">
+      <nav className="flex justify-between fixed z-10 w-full p-2 bg-olxnav items-center gap-6">
         <h1 className="text-2xl font-bold cursor-pointer">
           <img src={logoIcon} width={"45px"} />
         </h1>
