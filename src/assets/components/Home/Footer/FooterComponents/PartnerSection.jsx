@@ -1,9 +1,9 @@
-import carTradeLogo from "../../../stocks/images/partners/cartrade_tech.svg";
-import olxLogo from "../../../stocks/images/partners/olx.svg";
-import carWaleLogo from "../../../stocks/images/partners/carwale.svg";
-import bikeWalaLogo from "../../../stocks/images/partners/bikewale.svg";
-import carTradeLogo2 from "../../../stocks/images/partners/cartrade.svg";
-import mobilityOutlookLogo from "../../../stocks/images/partners/mobility.svg";
+import carTradeLogo from "../../../../stocks/images/partners/cartrade_tech.svg";
+import olxLogo from "../../../../stocks/images/partners/olx.svg";
+import carWaleLogo from "../../../../stocks/images/partners/carwale.svg";
+import bikeWalaLogo from "../../../../stocks/images/partners/bikewale.svg";
+import carTradeLogo2 from "../../../../stocks/images/partners/cartrade.svg";
+import mobilityOutlookLogo from "../../../../stocks/images/partners/mobility.svg";
 
 function PartnerSection() {
   return (

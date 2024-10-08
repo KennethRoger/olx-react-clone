@@ -2,6 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+  .form-component-space {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+
+  .form-component-style {
+    border: 1px solid #002f34;
+    padding: 0.5rem;
+    border-radius: 0.375rem;
+    margin-top: 0.2rem;
+  }
+}
+
 body {
   color: #002f34;
 }

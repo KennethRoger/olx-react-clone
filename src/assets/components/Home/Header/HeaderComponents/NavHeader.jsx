@@ -15,7 +15,7 @@ function NavHeader() {
           <li>Commercial & Other Vehicles</li>
           <li>For Rent: Houses & Apartments</li>
         </ul>
-      </nav>
+      </nav> 
     </div>
   );
 }

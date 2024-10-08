@@ -1,7 +1,7 @@
 import React from "react";
-import phoneAppImg from "../../../stocks/images/phone-app.webp";
-import appStoreImg from "../../../stocks/images/appstore.webp";
-import playStoreImg from "../../../stocks/images/playstore.webp";
+import phoneAppImg from "../../../../stocks/images/phone-app.webp";
+import appStoreImg from "../../../../stocks/images/appstore.webp";
+import playStoreImg from "../../../../stocks/images/playstore.webp";
 
 function PhoneAppPromotion() {
   return (
