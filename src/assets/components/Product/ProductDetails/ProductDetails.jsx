@@ -34,13 +34,21 @@ function ProductDetails({ id }) {
           <img
             src={product.imageURL}
             alt={product.productName}
-            className="border border-black w-[700px] h-[400px]"
+            className="border border-black min-w-[800px] max-h-full"
           />
         </div>
         <div className="flex flex-col p-5 border">
           <div className="">
-            <h1 className="font-bold text-2xl">Product Name</h1>
-            <p className="text-xl mt-4">{product.productName}</p>
+            <div className="flex justify-between">
+              <div>
+                <h1 className="font-bold text-2xl">Product Name</h1>
+                <p className="text-xl mt-4">{product.productName}</p>
+              </div>
+              <div>
+                <h1 className="font-bold text-2xl">Seller</h1>
+                <p className="text-xl mt-4">{product.userName}</p>
+              </div>
+            </div>
             <h1 className="font-bold text-2xl mt-8">Price</h1>
             <p className="text-xl mt-2">&#8377; {product.price}</p>
             <hr className="mt-5 mb-5" />

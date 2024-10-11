@@ -11,7 +11,7 @@ function Product() {
     <>
       <Header />
       <main className="flex justify-center">
-        <div className="w-[65%]">
+        <div className="w-[80%]">
           <ProductDetails id={id} />
         </div>
       </main>

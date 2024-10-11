@@ -15,7 +15,6 @@ function App() {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
 
-  // Google sign in
   const handleGoogleSignIn = async () => {
     try {
       const result = await signInWithPopup(auth, provider);
@@ -70,7 +69,7 @@ function App() {
             <Route path="/product/:id" element={<Product />} />
             <Route
               path="*"
-              element={"Replace with an element for showing not found"}
+              element={"Not found"}
             />
           </Routes>
         </UserContext.Provider>

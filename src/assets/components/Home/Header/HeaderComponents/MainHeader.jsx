@@ -6,21 +6,22 @@ import SignInModal from "./SignInModal";
 import { UserContext } from "../../../../../App";
 import { useState, useContext, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { SearchContext } from "../../Home";
 
 function MainHeader() {
   const [viewProfile, setViewProfile] = useState(false);
   const [isModalVisible, setIsModalVisible] = useState(false);
+  const [searchInput, setSearchInput] = useState("");
 
   const { user, handleGoogleSignIn, handleLogout } = useContext(UserContext);
+  const { setSearchQuery } = useContext(SearchContext) || "";
 
   const navigate = useNavigate();
 
-  // Profile options
   const showProfile = () => {
     setViewProfile(!viewProfile);
   };
 
-  // Modal visualization
   const openModal = () => {
     setIsModalVisible(true);
   };
@@ -35,6 +36,12 @@ function MainHeader() {
     } else {
       openModal();
     }
+  };
+
+  const handleSearchChange = (e) => {
+    const value = e.target.value;
+    setSearchInput(value);
+    setSearchQuery(value);
   };
 
   useEffect(() => {
@@ -62,6 +69,8 @@ function MainHeader() {
             className="p-2 ps-2 border-2 border-[#002F34] flex-1 rounded-l-md focus:border-[#00fff6]"
             type="text"
             placeholder="Find Cars, Mobile Phones and more..."
+            value={searchInput}
+            onChange={handleSearchChange}
           />
           <div className="bg-[#002F34] h-[44px] p-4 rounded-r-md flex justify-center items-center cursor-pointer">
             <i className="fa-solid fa-magnifying-glass text-white text-xl"></i>
@@ -71,7 +80,6 @@ function MainHeader() {
           <p>ENGLISH</p>
           <i className="fa-solid fa-angle-down right-3 cursor-pointer text-2xl"></i>
         </div>
-        {/* Contents from here change based on user authentication */}
         {user ? (
           <>
             <i className="fa-brands fa-rocketchat text-xl text-[#002F34]"></i>
@@ -128,7 +136,6 @@ function MainHeader() {
             Login
           </p>
         )}
-        {/* Sign in Modal */}
         <SignInModal isVisible={isModalVisible} onClose={closeModal}>
           <div className="flex flex-col justify-center items-center gap-8">
             <img src={loginGuitarImg} alt="A guitar image" width={"150px"} />
